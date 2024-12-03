@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Nav and Footer</title>
+    <link rel="stylesheet" href="/stylesheets/Landing.css">
+    <link rel="stylesheet" href="/stylesheets/mainQuiz.css">
+</head>
+<body>
+    <div class="container">
+        <button class="toggle-btn" onclick="toggleNav()">▶</button>
+        <nav id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="http://localhost:3000/quizProtoPage">Quiz Page</a></li>
+                <li><a href="http://localhost:3000/infoGenKnowledge">History</a></li>
+                <li><a href="http://localhost:3000/aboutUs">About Us</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="main-content">
+                <div class="text-content">
+                    <h2>Discover Your Perfect Quiz Experience Today!</h2>
+                    <p>Unlock your potential with our engaging quizzes designed to entertain and educate. Join our community and start your journey of discovery now!</p>
+                </div>
+                <img src="/images/google-quiz.webp" alt="Quiz Image" class="quiz-image">
+            </div>
+            <div class="services-section">
+                <h3>Unlock Your Potential with Our Services</h3>
+                <p>Experience tailored solutions designed to meet your unique needs. Our services empower you to achieve your goals efficiently and effectively. Join a community that values innovation and excellence.</p>
+            </div>
+
+            <div class="ads-section">
+                <div class="ad ad-left">
+                    <img src="/images/sasa.webp" class="ad-image">
+                    <h4>Take the Ultimate Quiz Challenge!</h4>
+                    <p>Join thousands of users and test your knowledge with our exciting quizzes. Click to start!</p>
+                    <button onclick="location.href='/quizProtoPage'">Start Quiz</button>
+                </div>
+                <div class="ad ad-right">
+                    <img src="/images/quizizz-logo-vector.png" alt="Sign Up" class="ad-image">
+                    <h4>Unlock Your Learning Potential!</h4>
+                    <p>Discover personalized quizzes tailored just for you. Sign up now for free!</p>
+                    <button onclick="location.href='https://quizizz.com/?lng=en'">Sign Up</button>
+                </div>
+            </div>
+            
+        </main>
+        
+        
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Quizzes. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quiz.html">Quiz Page</a></li>
+                    <li><a href="http://localhost:3000/infoGenKnowledge">History</a></li>
+                    <li><a href="http://localhost:3000/aboutUs">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const sidebar = document.getElementById('sidebar');
+            const btn = document.querySelector('.toggle-btn');
+            sidebar.classList.toggle('active');
+            if (sidebar.classList.contains('active')) {
+                sidebar.style.transform = 'translateX(0)'; // Show sidebar
+                btn.textContent = '◀'; // Change button to indicate close
+            } else {
+                sidebar.style.transform = 'translateX(-100%)'; // Hide sidebar
+                btn.textContent = '▶'; // Change button to indicate open
+            }
+        }
+    </script>
+</body>
+</html>

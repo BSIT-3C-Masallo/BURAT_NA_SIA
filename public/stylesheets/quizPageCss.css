@@ -1,0 +1,16 @@
+.quiz{
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  width: 75%;
+  margin: auto;
+  max-height: 85vh;
+  overflow-x: auto;
+ }
+ .quiz > h1{
+  color:white;
+  text-align: center;
+ }
+ .quiz > ul{
+  color: white;
+ }

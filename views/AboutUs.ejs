@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dev</title>
+    
+    <link rel="stylesheet" href="/stylesheets/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="/stylesheets/mainQuizCss.css">
+    <link rel="stylesheet" href="/stylesheets/aboutUsCss.css">
+    <link rel="icon" href="/images/favicon.png" size="32x32" type="image/png">
+    <link rel="icon" href="/images/favicon.png" size="16x16" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="/images/Sumeru_Emblem_Night.png" width="100">
+		<h1>Sumeru Akademiya</h1>
+    </header>
+
+    <div class="container">
+      <%- include('burat/navBar.ejs') %>
+        <button id="restore"><h2>></h2></button>
+    <main class="about-us">
+        
+        <div class="profile-container">
+            <div class="image-container">
+              <div class="hover-info">
+                <img src="images/Puddle_Slime_SP.png"alt="Your Image">
+                <h1>Jefferson C. Masallo</h1>
+                <p>Third Year BSIT Student at City of Malabon University, Took the lead in the development of the project.</p>
+                <div class="socials">
+                  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+                  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                  <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-container">
+            <div class="image-container">
+              <div class="hover-info">
+                <img src="images/slimes/Pink_Slime_SP.png"alt="Your Image">
+                <h1>Boban, Andrea</h1>
+                <p>Third Year BSIT Student at City of Malabon University, Took the lead in the development of the project.</p>
+                <div class="socials">
+                  <a href="https://www.facebook.com/Andrea.boban23" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+                  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                  <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </main>
+    </div>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2024 Quizzes. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</div>
+</footer>
+
+<script>
+    const btn = document.getElementById('minimize');
+let ifminimizeclick = true;
+btn.addEventListener('click', function() {
+  if (ifminimizeclick) {
+      document.getElementById("nav").style.width="0px";
+      document.getElementById("restore").style.display="block";
+      document.getElementById("minimize").style.display="none";
+  }
+});
+
+const btn1 = document.getElementById('restore');
+let ifrestoreclick = true;
+btn1.addEventListener('click', function() {
+  if (ifrestoreclick) {
+      document.getElementById("nav").style.width="200px";
+      document.getElementById("restore").style.display="none";
+      document.getElementById("minimize").style.display="block";
+  }	  
+});
+</script>
+
+
+
+</body>
+</html>
+

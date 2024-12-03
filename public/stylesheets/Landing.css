@@ -1,0 +1,249 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("/images/sumeru-genshin-impact-thumb.jpg");
+            background-repeat: no-repeat;
+
+            
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.toggle-btn {
+    background: linear-gradient(to bottom, #6BAF92, #4B794C); 
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Slightly larger padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.sidebar {
+    width: 200px;
+    background: linear-gradient(to right, #4A4A4A, #767676); /* Gradient background */
+    color: white;
+    height: 100vh;
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition */
+    transform: translateX(-100%); /* Hide by default */
+    position: relative;
+    border-right: 5px solid #6BAF92 /* Right border for accent */
+    height:auto;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Show when active */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    transition: background 0.3s; /* Smooth background change on hover */
+    border-radius: 5px; /* Rounded corners for list items */
+}
+
+.sidebar ul li:hover {
+    background-color: #575757; /* Darker background on hover */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Bold text for links */
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer {
+    background-color: #2b4c39;  /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Centered text */
+    padding: 30px; /* Increased padding for a larger footer */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0; /* Align at the bottom */
+    width: 100%; /* Full width */
+    font-size: 18px; /* Increased font size for footer text */
+}
+
+.footer .social-media {
+    margin-top: 10px; /* Space above social media links */
+}
+
+.footer .social-media a {
+    color: white; /* Social media link color */
+    margin: 0 15px; /* Space between social media icons */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold social media links */
+}
+
+.footer .social-media a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-nav {
+    margin-top: 15px; /* Space above footer navigation */
+}
+
+.footer-nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the links */
+}
+
+.footer-nav li {
+    margin: 0 15px; /* Space between links */
+}
+
+.footer-nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size for footer links */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px; /* Increased padding for better spacing */
+    background-color: #ffffff; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px; /* Larger margin */
+    max-width: 50%; /* Adjust text width */
+}
+
+.text-content h2 {
+    font-size: 28px; /* Increased heading size */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 18px; /* Larger text size */
+    color: #555;
+    line-height: 1.6;
+}
+
+.quiz-image {
+    width: 80%; /* Increase width to 80% */
+    max-width: 400px; /* Adjust maximum size if needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match container's rounded corners */
+    transition: transform 0.3s; /* Smooth scale effect */
+}
+
+.quiz-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.services-section {
+    text-align: center; /* Center the text */
+    margin-top: 40px; /* Increased space above the section */
+    padding: 30px; /* Inner padding */
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.services-section h3 {
+    font-size: 30px; /* Larger heading size */
+    color: #333; /* Heading color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.services-section p {
+    font-size: 18px; /* Larger text size */
+    color: #555; /* Text color */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Optional: limit width for readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.ads-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space ads evenly */
+    margin-top: 40px; /* Space above ads */
+}
+
+.ad {
+    background-color: #f0f8ff; /* Light background for ads */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    width: 45%; /* Set width for ads */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.ad:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.ad h4 {
+    font-size: 24px; /* Larger font size for headings */
+    color: #333; /* Heading color */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.ad p {
+    font-size: 18px; /* Larger font size for paragraph text */
+    color: #555; /* Text color */
+    margin-bottom: 15px; /* Space below paragraph */
+}
+
+.ad button {
+    background-color: #4CAF50; /* Green background for button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 25px; /* Increased padding for a larger button */
+    font-size: 18px; /* Larger font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.ad button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.ad-image {
+    width: 25%; /* Decreased width for a smaller image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match ad rounded corners */
+    margin-bottom: 15px; /* Space below the image */
+    display: block; /* Center image within the ad */
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
+}

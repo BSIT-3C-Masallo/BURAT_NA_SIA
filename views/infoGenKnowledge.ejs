@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" type="text/css" href="/stylesheets/mainQuizCss.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/infoGenKnowledgeCss.css">
+	<link rel="stylesheet" href="/stylesheets/@fortawesome/fontawesome-free/css/all.css">
+	<title>Static Page</title>
+</head>
+<body>
+    <header>
+        <img src="/images/Sumeru_Emblem_Night.png" width="100">
+		<h1>Sumeru Akademiya</h1>
+    </header>
+
+    <div class="container">
+        <%- include('burat/navBar.ejs') %>
+		<button id="restore"><h2>></h2></button>
+        <main>
+			<div class="slideshow_infoMainContainer">
+				<br>
+				<div class="slideshow-container">
+
+				   <div class="mySlides fade">
+				   <div class="numbertext">1 / 3</div>
+				   <img class="slideImg" src="/images/images (3).jpeg" style="width:100%">
+				   <div class="text">Caption Text</div>
+					</div>
+				
+				<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img class="slideImg" src="/images/images (4).jpeg" style="width:100%">
+				<div class="text">Caption Two</div>
+				</div>
+				
+				<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img class="slideImg" src="/images/images (7).jpeg" style="width:100%">
+				<div class="text">Caption Three</div>
+				</div>
+				
+			   
+				<a class="prev"onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next"onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+				
+			  
+				<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+				<br>
+				<div class="genKnowledge-details">
+					<h2><u>About General Knowledge Category</u></h2>
+					<p>In a General Knowledge category of a quizbee, participants are typically tested on a broad range of topics.</p>
+					<p>These Might inlude:</p>
+					<p><b>Geography</b> - Questions about countries, capitals, landmarks, and world geography.</p>
+					<p><b>History</b> - Questions covering important events, famous historical figures, and dates.</p>
+					<p><b>Science</b> - Basic questions on biology, physics, chemistry, and general scientific concepts.</p>
+					<p><b>Literatures</b> - Questions about famous authors, literary works, and genres.</p>
+					<p><b>Current Events</b> - Topics concerning recent happenings in politics, sports, and global affairs.</p>
+					<p><b>Arts and Culture</b> - Questions on art, history, music, film, and global traditions.</p>
+					<p><b>Sports</b> - Famous Atheletes, world records, and major sporting events.</p>
+				</div>
+				<br>
+			</div>	
+			
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+			<p>&copy; 2024 Quizzes. All rights reserved.</p>
+			<div class="social-icons">
+				<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+			</div>
+		</div>
+    </footer>
+	<script>
+	const btn = document.getElementById('minimize');
+	let ifminimizeclick = true;
+	btn.addEventListener('click', function() {
+	  if (ifminimizeclick) {
+		  document.getElementById("nav").style.width="0px";
+		  document.getElementById("restore").style.display="block";
+		  document.getElementById("minimize").style.display="none";
+	  }
+	});
+
+	const btn1 = document.getElementById('restore');
+	let ifrestoreclick = true;
+	btn1.addEventListener('click', function() {
+	  if (ifrestoreclick) {
+		  document.getElementById("nav").style.width="200px";
+		  document.getElementById("restore").style.display="none";
+		  document.getElementById("minimize").style.display="block";
+	  }	  
+	});
+
+	let slideIndex =1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+ showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n){
+ showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex =1}
+if (n < 1) {slideIndex = slides.length}
+for (i =0; i < slides.length; i++) {
+ slides[i].style.display = "none";
+ }
+for(i =0; i < dots.length; i++) {
+dots[i].className= dots[i].className.replace(" active","");
+}
+ slides[slideIndex-1].style.display="block";
+ dots[slideIndex-1].className+=" active";
+}
+
+	</script>
+</body>
+</html>

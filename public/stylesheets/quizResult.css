@@ -1,0 +1,108 @@
+body {
+    background-image: url("/images/sumeru-genshin-impact-thumb.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #4a69bd;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideDown 0.8s ease;
+}
+
+h3 {
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(135deg, #ffffff, #f1f3f4);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+.card h5 {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Correct & Incorrect Text Colors */
+.card p[style="color: red;"] {
+    color: #e74c3c;
+    font-weight: bold;
+}
+.card p[style="color: green;"] {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Fancy Button Styling */
+.btn-primary {
+    display: inline-block;
+    width: 48%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #6a89cc, #4a69bd);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect */
+.btn-primary:hover {
+    background: linear-gradient(145deg, #4a69bd, #6a89cc);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 0 15px rgba(102, 153, 204, 0.5);
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Button Container for Alignment */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

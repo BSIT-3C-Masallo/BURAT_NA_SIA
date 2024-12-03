@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/quizResult.css">
+</head>
+<body>
+<div class="container">
+    <h1>Quiz Results</h1>
+    <h3>You scored <%= score %> out of <%= totalQuestions %> (<%= percentage %>%)</h3> <!-- Added percentage display -->
+
+    <div class="mt-4">
+        <% results.forEach((result, index) => { %>
+            <div class="card p-3 mt-3">
+                <h5>Question <%= index + 1 %>:</h5>
+                <p><strong>Question:</strong> <%= result.question %></p>
+                <p><strong>Your Answer:</strong> <%= result.userAnswer %></p>
+                <p><strong>Correct Answer:</strong> <%= result.correctAnswer %></p>
+                <% if (!result.isCorrect) { %>
+                    <p style="color: red;">You got this one wrong.</p>
+                <% } else { %>
+                    <p style="color: green;">Correct!</p>
+                <% } %>
+            </div>
+        <% }); %>
+    </div>
+
+    <a href="/quizProtoPage" class="btn btn-primary mt-4">Try Again</a>
+    <a href="/leaderBoard" class="btn btn-primary mt-4">Next Page</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

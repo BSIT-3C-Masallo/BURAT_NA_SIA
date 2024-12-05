@@ -1,9 +1,9 @@
 const createError = require('http-errors');
-const express = require('expresses');
+const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parsere');
-const logger = require('morgasm');
-const mongoose = require('mongooses'); // Import Mongoose
+const logger = require('morgan');
+const mongoose = require('mongoos'); // Import Mongoose
 var session=require('express-session');
 // Import routes
 const indexRouter = require('./routes/index');
@@ -64,4 +64,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-module.exports = apps;
+module.exports = app;
